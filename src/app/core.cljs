@@ -2,7 +2,9 @@
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [reagent.dom :as rdom]
             [cljs-http.client :as http]
-            [cljs.core.async :refer [<!]]))
+            [cljs.core.async :refer [<!]]
+            [app.components.center :refer [center]]
+            [app.components.sidebar :refer [sidebar]]))
 
 (def function-url (str (. js/window -location) "api/hello"))
 
@@ -13,17 +15,13 @@
 
 (defn app
   []
-  [:div.min-h-full.bg-white.flex.justify-center.items-center
-   [:div.flex.flex-col.justify-center.items-center.px-4
-    [:div.text-center
-     [:h2.text-base.text-indigo-600.font-semiboldy.tracking-wide.uppercase
-      "Welcome"]
-     [:p.mt-2.text-3xl.leading-8.font-extrabold.tracking-tight.text-gray-900
-      "Hello, ClojureScript!"]]
-    [:div.py-5.text-center
-     [:button.bg-indigo-500.hover:bg-indigo-700.text-white.font-bold.py-2.px-4.rounded
-      {:on-click invoke-function}
-      "Trigger Vercel Function"]]]])
+  [:div.min-w-full.min-h-full
+   [center
+    [sidebar
+     [:div.flex.flex-col.pt-4
+      [:div.w-full.flex.justify-center [:h1.text-4xl.font-bold "cl4js"]]
+      [:div.h-screen.w-full]]
+     [:div.flex.flex-col.pt-4 "yolo"]]]])
 
 (defn start []
   (rdom/render [app] (. js/document (getElementById "app"))))

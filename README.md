@@ -1,21 +1,6 @@
-# vercel-cljs
+# cl4js
 
-This a template that lets you deploy a ClojureScript project on Vercel. It is currently using the following:
-
-- [ClojureScript 1.14.x](https://clojurescript.org/)
-- [thheller/shadow-cljs](https://github.com/thheller/shadow-cljs)
-- [TailwindCSS](https://tailwindcss.com/)
-- [PostCSS](https://postcss.org/)
-- [Reagent](https://reagent-project.github.io/)
-
-The template automatically sets up the following features that Vercel Offers:
-
-- A basic Front End deployed as a Vercel Site
-- A Vercel Serverless Function (see [docs](https://vercel.com/docs/concepts/functions/serverless-functions) to learn more)
-
-You can remove some of these features based on your use case.
-
-A demo of this repo is also available at https://vercel-cljs.vercel.app/
+A demo of this repo is also available at https://cl4js.vercel.app/
 
 # Commands
 
